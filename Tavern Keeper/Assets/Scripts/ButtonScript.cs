@@ -7,7 +7,7 @@ public class ButtonScript : MonoBehaviour
     public Canvas CanvasObject; // Assign in inspector
     public bool isShowing;
 
-    void start()
+    void Start()
     {
         CanvasObject.enabled = isShowing;
     }
