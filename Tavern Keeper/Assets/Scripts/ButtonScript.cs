@@ -5,13 +5,14 @@ using UnityEngine;
 public class ButtonScript : MonoBehaviour
 {
     public Canvas CanvasObject; // Assign in inspector
-    private bool isShowing;
+    public bool isShowing;
 
-    public void buttonpress(){
-        Debug.Log("You've pressed button");
+    void start()
+    {
+        CanvasObject.enabled = isShowing;
     }
 
-    public void DisableCanvas() {
+    public void ToggleCanvas() {
         Debug.Log("You've pressed button");
         isShowing = !isShowing;
         CanvasObject.enabled = isShowing;
