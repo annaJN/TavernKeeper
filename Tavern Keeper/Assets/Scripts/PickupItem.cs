@@ -1,31 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickupItem : MonoBehaviour
 {
 
     private Inventory inventory;
+    public GameObject itemButton;
 
     // Start is called before the first frame update
     void Start()
     {
-        inventory = GameObject.FindObjectWithTag("Player").GetComponent<Inventory>();
-        //Should not be player, should be something else that we add to our GameManager
-
+        inventory = GameObject.FindGameObjectWithTag("gameManager").GetComponent<Inventory>(); // Gamemanager is the one holding our inventory
+        Button btn = this.GetComponent<Button>();
+        btn.onClick.AddListener(GetFoodOnClick);
     }
 
-    void onTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player")){
-            for (int i = 0; i < inventory.slots.Lenght; i++)
+    void GetFoodOnClick() {
+        //Debug.Log ("The GetFoodOnClick button has been pressed");
+            for (int i = 0; i < inventory.slots.Length; i++)
             {
-                if(inventory.isFull[i] == false){
+                if(inventory.isEmpty(i)){
                     //then the item can be added to the inventory
-                    inventory.isFull[i] = true;
+                    inventory.setFull(i, true); //since inventory is private we call this setter function
+                    Instantiate(itemButton, inventory.slots[i].transform, false);
                     break;
                 }
             }
-        }
     }
 
     // Update is called once per frame
