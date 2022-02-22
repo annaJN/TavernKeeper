@@ -23,9 +23,4 @@ public class Inventory : MonoBehaviour
         isFull = new bool[slots.Length];        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

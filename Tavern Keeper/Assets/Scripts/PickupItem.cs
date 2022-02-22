@@ -18,21 +18,15 @@ public class PickupItem : MonoBehaviour
     }
 
     void GetFoodOnClick() {
-        //Debug.Log ("The GetFoodOnClick button has been pressed");
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if(inventory.isEmpty(i)){
-                    //then the item can be added to the inventory
-                    inventory.setFull(i, true); //since inventory is private we call this setter function
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
-                    break;
-                }
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if(inventory.isEmpty(i)){
+                //then the item can be added to the inventory
+                inventory.setFull(i, true); //since inventory is private we call this setter function
+                Instantiate(itemButton, inventory.slots[i].transform, false);
+                break;
             }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
