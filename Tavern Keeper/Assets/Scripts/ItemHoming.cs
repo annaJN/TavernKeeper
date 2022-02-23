@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems; 
 
-public class serving : MonoBehaviour
+public class ItemHoming : MonoBehaviour, IDropHandler
 {
+
+    public void OnDrop(PointerEventData eventData){
+        Debug.Log("OnDrop");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
