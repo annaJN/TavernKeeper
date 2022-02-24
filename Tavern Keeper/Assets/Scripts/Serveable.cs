@@ -13,6 +13,7 @@ public class Serveable : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public int slotindex;
+    public int id; //beer is 1, soup should be 2
 
     void Start()
     {

@@ -8,16 +8,25 @@ public class DropItem : MonoBehaviour, IDropHandler
 {
     private InMemoryVariableStorage variableStorage;
     private Inventory inventory;
+    public int conditionItem; //the item the character/object wants
     public void Start() {
         variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
         inventory = GameObject.FindGameObjectWithTag("gameManager").GetComponent<Inventory>();
     }    
     public void OnDrop(PointerEventData eventData){
         Debug.Log("OnDrop");
-        //check if it's the right order
-        inventory.setFull(eventData.pointerDrag.GetComponent<Serveable>().slotindex, false); //sets the food item's inventory slot to empty
-        GameObject.Destroy(eventData.pointerDrag); //destroys the food item
-        variableStorage.SetValue("$gregDialog", 2); //sätter variabel i yarn
+        GameObject foodItem = eventData.pointerDrag;
+        //check if it's the right order (only one item for now)
+        if (foodItem.GetComponent<Serveable>().id == conditionItem){
+            inventory.setFull(foodItem.GetComponent<Serveable>().slotindex, false); //sets the food item's inventory slot to empty
+            GameObject.Destroy(foodItem); //destroys the food item
+            variableStorage.SetValue("$gregDialog", 2); //sätter variabel i yarn
+        }
+    }
+
+    [YarnCommand("SetOrder")]
+    public void SetOrder(int id){
+        conditionItem = id;
     }
 
 }

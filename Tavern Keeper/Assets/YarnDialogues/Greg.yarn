@@ -8,15 +8,17 @@ position: -260,-133
     <<jump Greg_ale>>
 <<endif>>
 
-Greg: Hello I am GREG. 
-Greg: Greg is my name. Do you serve ale here?
--> Of course!
-    Greg: Ah, perfect!
--> No
-    Greg: Haha, that's funny...
-Greg: Then I would like an ale!
--> Coming right up!
-<<set $gregDialog to 1>>
+Greg: One ale please!
+<<SetOrder Greg 1>>
+// Greg: Hello I am GREG. 
+// Greg: Greg is my name. Do you serve ale here?
+// -> Of course!
+//     Greg: Ah, perfect!
+// -> No
+//     Greg: Haha, that's funny...
+// Greg: Then I would like an ale!
+// -> Coming right up!
+// <<set $gregDialog to 1>>
 
 ===
 title: Greg_waiting
@@ -28,12 +30,12 @@ Greg: Where is my ale?
 title: Greg_ale
 ---
 Greg: Thank you! 
--> Uhm... about the payment...
-Greg: Oh, yes, right. Of course.
-Greg: Wait...
-Greg: ...
-Greg: Aha! Found the money!
-Greg: Here you are
+// -> Uhm... about the payment...
+// Greg: Oh, yes, right. Of course.
+// Greg: Wait...
+// Greg: ...
+// Greg: Aha! Found the money!
+// Greg: Here you are
 
 ===
 title: Greg_ale2

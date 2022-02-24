@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  slotindex: 0
+  id: 1
 --- !u!225 &2891485848988804954
 CanvasGroup:
   m_ObjectHideFlags: 0
