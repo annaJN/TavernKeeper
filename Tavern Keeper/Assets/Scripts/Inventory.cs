@@ -6,7 +6,7 @@ public class Inventory : MonoBehaviour
 {
     //Defining two variables
     private bool[] isFull;
-    public GameObject[] slots;
+    public GameObject[] slots; //array with the inventoryslots
 
     public bool isEmpty(int index){
         return !isFull[index]; //Inverting to give true if it is empty

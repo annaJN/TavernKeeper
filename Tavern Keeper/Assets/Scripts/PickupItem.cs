@@ -23,7 +23,8 @@ public class PickupItem : MonoBehaviour
             if(inventory.isEmpty(i)){
                 //then the item can be added to the inventory
                 inventory.setFull(i, true); //since inventory is private we call this setter function
-                Instantiate(itemButton, inventory.slots[i].transform, false);
+                Serveable serveable = Instantiate(itemButton, inventory.slots[i].transform, false).GetComponent<Serveable>(); //finds the servable script on the instantiated food object
+                serveable.slotindex = i; 
                 break;
             }
         }

@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class GiveItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler//, IDropHandler
+public class Serveable : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler//, IDropHandler
 {
 
     private Canvas canvas; 
-    private Inventory inventory;
+    //private Inventory inventory;
     public bool isDragging;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    public int slotindex;
 
     void Start()
     {
