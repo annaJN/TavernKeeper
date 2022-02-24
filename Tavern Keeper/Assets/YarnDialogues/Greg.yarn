@@ -2,13 +2,41 @@
 tags:
 position: -260,-133
 ---
+<<if $gregDialog == 1>>
+    <<jump Greg_waiting>>
+<<elseif $gregDialog == 2>>
+    <<jump Greg_ale>>
+<<endif>>
+
 Greg: Hello I am GREG. 
-Greg: Greg is my name. What's yours?
--> I am Player.
-    Greg: That's... a very... nice name. 
--> Nonya
-    Greg: What a cool name!
-Greg: Also... 
-Greg: I would like an ale!
+Greg: Greg is my name. Do you serve ale here?
+-> Of course!
+    Greg: Ah, perfect!
+-> No
+    Greg: Haha, that's funny...
+Greg: Then I would like an ale!
 -> Coming right up!
+<<set $gregDialog to 1>>
+
+===
+title: Greg_waiting
+---
+Greg: Where is my ale?
+-> Coming right up!
+
+===
+title: Greg_ale
+---
+Greg: Thank you! 
+-> Uhm... about the payment...
+Greg: Oh, yes, right. Of course.
+Greg: Wait...
+Greg: ...
+Greg: Aha! Found the money!
+Greg: Here you are
+
+===
+title: Greg_ale2
+---
+Greg: Ah! Nothing like good ale!
 ===

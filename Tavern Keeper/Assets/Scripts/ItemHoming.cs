@@ -8,6 +8,7 @@ public class ItemHoming : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData){
         Debug.Log("OnDrop");
+        GameObject.Destroy(eventData.pointerDrag);
     }
 
     // Start is called before the first frame update

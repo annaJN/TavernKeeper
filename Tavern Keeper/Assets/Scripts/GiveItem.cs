@@ -38,6 +38,7 @@ public class GiveItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnEndDrag(PointerEventData eventData){
         Debug.Log("OnEndDrag");
         canvasGroup.blocksRaycasts = true;
+        rectTransform.anchoredPosition = new Vector2(0,0); //resets position. Needs to be negated if dragged elsewhere
     }
 
     public void OnPointerDown(PointerEventData eventData){
