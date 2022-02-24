@@ -14,13 +14,17 @@ public class DropItem : MonoBehaviour, IDropHandler
         inventory = GameObject.FindGameObjectWithTag("gameManager").GetComponent<Inventory>();
     }    
     public void OnDrop(PointerEventData eventData){
-        Debug.Log("OnDrop");
         GameObject foodItem = eventData.pointerDrag;
         //check if it's the right order (only one item for now)
         if (foodItem.GetComponent<Serveable>().id == conditionItem){
             inventory.setFull(foodItem.GetComponent<Serveable>().slotindex, false); //sets the food item's inventory slot to empty
             GameObject.Destroy(foodItem); //destroys the food item
-            variableStorage.SetValue("$gregDialog", 2); //sätter variabel i yarn
+            YarnInteractable interactable = gameObject.GetComponent<YarnInteractable>();
+            if (interactable != null){ //should be subclass for characters but whatever
+                Debug.Log("hababa");
+                variableStorage.SetValue("$gregDialog", 2); //sätter variabel i yarn
+                interactable.OnMouseDown(); //startar konversation
+            }
         }
     }
 
