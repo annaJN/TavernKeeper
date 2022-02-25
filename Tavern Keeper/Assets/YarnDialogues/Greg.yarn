@@ -2,13 +2,12 @@
 tags:
 position: -260,-133
 ---
-<<if $gregDialog == 1>>
-    <<jump Greg_waiting>>
-<<elseif $gregDialog == 2>>
+<<if $GregServed == 1>>
     <<jump Greg_ale>>
 <<endif>>
 
 Greg: One ale please!
+<<set $GregServed to 0>>
 <<SetOrder Greg 1>> //1 says that greg wants an ale
 // Greg: Hello I am GREG. 
 // Greg: Greg is my name. Do you serve ale here?
