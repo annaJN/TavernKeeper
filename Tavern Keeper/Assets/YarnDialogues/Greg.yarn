@@ -9,7 +9,7 @@ position: -260,-133
 <<endif>>
 
 Greg: One ale please!
-<<SetOrder Greg 1>>
+<<SetOrder Greg 1>> //1 says that greg wants an ale
 // Greg: Hello I am GREG. 
 // Greg: Greg is my name. Do you serve ale here?
 // -> Of course!

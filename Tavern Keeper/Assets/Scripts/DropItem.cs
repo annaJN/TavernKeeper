@@ -21,7 +21,6 @@ public class DropItem : MonoBehaviour, IDropHandler
             GameObject.Destroy(foodItem); //destroys the food item
             YarnInteractable interactable = gameObject.GetComponent<YarnInteractable>();
             if (interactable != null){ //should be subclass for characters but whatever
-                Debug.Log("hababa");
                 variableStorage.SetValue("$gregDialog", 2); //sätter variabel i yarn
                 interactable.OnMouseDown(); //startar konversation
             }
