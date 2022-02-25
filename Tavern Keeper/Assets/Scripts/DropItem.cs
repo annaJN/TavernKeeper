@@ -22,7 +22,6 @@ public class DropItem : MonoBehaviour, IDropHandler
             YarnInteractable interactable = gameObject.GetComponent<YarnInteractable>();
             if (interactable != null){ //should be subclass for characters but whatever
                 string serveVariable = "$" + gameObject.name + "Served";
-                Debug.Log(serveVariable);
                 variableStorage.SetValue(serveVariable, 1); //sätter variabel i Yarn
                 interactable.OnMouseDown(); //startar konversation
             }
