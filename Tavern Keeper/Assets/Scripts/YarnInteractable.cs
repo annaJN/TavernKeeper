@@ -5,7 +5,7 @@ using Yarn.Unity;
 
 public class YarnInteractable : MonoBehaviour {
     // internal properties exposed to editor
-    [SerializeField] private string conversationStartNode;
+    public string conversationStartNode;
 
     // internal properties not exposed to editor
     private DialogueRunner dialogueRunner;
