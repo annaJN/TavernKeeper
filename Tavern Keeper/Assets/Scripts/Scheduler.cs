@@ -17,7 +17,7 @@ public class Scheduler : MonoBehaviour
         GameObject character = Instantiate(charTemplate, location.transform, false);
         character.name = charName;
         character.GetComponent<YarnInteractable>().conversationStartNode = charName;
-        Sprite sprite = Resources.Load<Sprite>("Images/" + charName);
+        Sprite sprite = Resources.Load<Sprite>("Characters/" + charName);
         character.GetComponent<Image>().sprite = sprite;
     }
     
