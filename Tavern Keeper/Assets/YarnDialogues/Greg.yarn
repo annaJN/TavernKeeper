@@ -5,6 +5,9 @@ position: -260,-133
 <<if $GregServed == 1>>
     <<jump Greg_ale>>
 <<endif>>
+<<if $GregDialog == 1>>
+    <<jump Greg_waiting>>
+<<endif>>
 
 Greg: One ale please!
 <<set $GregServed to 0>>
@@ -17,13 +20,15 @@ Greg: One ale please!
 //     Greg: Haha, that's funny...
 // Greg: Then I would like an ale!
 // -> Coming right up!
-// <<set $gregDialog to 1>>
+<<set $GregDialog to 1>>
 
 ===
 title: Greg_waiting
 ---
 Greg: Where is my ale?
 -> Coming right up!
+
+Player: I should go get an ale from the Bar. 
 
 ===
 title: Greg_ale

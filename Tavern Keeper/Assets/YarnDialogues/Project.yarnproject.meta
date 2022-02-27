@@ -11,9 +11,10 @@ ScriptedImporter:
   sourceScripts:
   - {fileID: 6391573757903218779, guid: b6d1fc4dc8851da4e8ca37711a26bac3, type: 3}
   - {fileID: 6391573757903218779, guid: a06cbc67b26ca214aaf09627c2830ebb, type: 3}
+  - {fileID: 6391573757903218779, guid: 22dbf686e7ae837c599359c47679bbcf, type: 3}
   compileErrors: []
   serializedDeclarations:
-  - name: $gregDialog
+  - name: $GregServed
     typeName: Number
     defaultValueBool: 0
     defaultValueNumber: 0
