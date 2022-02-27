@@ -25,9 +25,17 @@ public class MovementManager : MonoBehaviour
         Button_toTavern.SetActive(true); //make back-button visible
     }
 
-    //move to a table. To be changed when we add more tables
-    public void ToTable(){
+    //move to a table. Should be changed to move to several tables
+    public void ToTable1(){
         Camera.main.transform.position = new Vector3(48, -4.5f, -10);
+        Button_toTavern.SetActive(true); //make back-button visible
+    }
+        public void ToTable2(){
+        Camera.main.transform.position = new Vector3(48, -14.5f, -10);
+        Button_toTavern.SetActive(true); //make back-button visible
+    }
+        public void ToTable3(){
+        Camera.main.transform.position = new Vector3(48, -24.5f, -10);
         Button_toTavern.SetActive(true); //make back-button visible
     }
 }
