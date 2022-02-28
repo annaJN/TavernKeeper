@@ -12,7 +12,7 @@ Blue: Hehehehehe Brijon!
 <<LeaveChar GameManager BluuSword>>
 The creature runs of with your money. 
 You have been robbed, a nice start to the evening. 
-(Hopefully I can earn back the money today. I should check if there are any customers yet.) 
+(Hopefully I can earn back the money today. I should check if there are any customers here yet.) 
 <<EnterChar GameManager "Greg" CharHolder1_1>>
 
 ===
@@ -21,11 +21,25 @@ title: BluuMoney
 tags: 
 position: 5,-49
 ---
+<<if $BluuServed == 1>>
+    <<jump BluuSoup>>
+<<endif>>
+
 A blue creature stands before you, it seems familiar. 
 Blue: Hin hin. Woib? 
 The creature clicks a pouch of money and points at the soup. 
 Your pouch of money. 
--> Call for help to catch the creature
--> Give them some soup  
+(Maybe I could give them some soup or ale to get my money back. Or ask one of the adventurers to help me out.)
+<<set $BluuServed to 0>>
+<<SetOrder BluuMoney 2>>
+
     
+===
+
+Title: BluuSoup
+---
+The creature smiles and begins to eat with vigor. 
+He pour out the gold on the counter but keeps the pouch. 
+<<GetMoney GameManager 20>>
+(At least I got the gold back.)
 ===
