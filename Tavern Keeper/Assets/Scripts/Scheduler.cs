@@ -38,4 +38,8 @@ public class Scheduler : MonoBehaviour
         moneyCounter.text = money.ToString(); 
     }
     
+    [YarnCommand("SetStartNode")]
+    public void SetStartNode(GameObject character, string newNode){
+        character.GetComponent<YarnInteractable>().conversationStartNode = newNode;
+    }
 }

@@ -14,4 +14,5 @@ tags:
 <<GetMoney GameManager 5>> //Gives 5 money, or any other int you choose. 
 //can also take money with a negativ int, ex -5
 
+<<SetStartNode Name NewNode>> //sets a new start node for the character gameobject
 ===
