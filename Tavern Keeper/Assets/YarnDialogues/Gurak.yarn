@@ -9,15 +9,15 @@ Orc: Yes.
 Orc: Ale. 
 Orc: ...
 Orc: ...Please.
-<<set $GregServed to 0>>
-<<SetOrder Greg 1>> 
-<<SetStartNode Gurak "Gurak_waiting">>
+<<set $GurakServed to 0>>
+<<SetOrder Gurak 1>> 
+<<SetStartNode GameManager Gurak "Gurak_waiting">>
 
 ===
 title: Gurak_waiting
 ---
 <<if $GurakServed == 1>>
-    <<Jump Gurak_ale>>
+    <<jump Gurak_ale>>
 <<endif>>
 Gurak: Where is my ale?
 -> "Coming right up!"
@@ -26,10 +26,10 @@ Gurak: Where is my ale?
 ===
 title: Gurak_ale
 ---
-<<SetOrder Greg 0>>
+<<SetOrder Gurak 0>>
 The Orc looks tense, and is constantly glancing at the door. 
 You put the ale down on the table. 
-Greg: Ah, finally.
+Gurak: Ah, finally.
  -> "Uhm... That would be 5 slugs."
 Gurak: Oh, yes, right. Of course.
 Gurak: Wait...
@@ -39,7 +39,7 @@ Gurak: ...there.
 <<GetMoney GameManager 5>>
 Gurak: Here. 5 slugs.
 -> "Have a nice evening." 
-<<SetStartNode Gurak "Gurak_ale2">>
+<<SetStartNode GameManager Gurak "Gurak_ale2">>
 ===
 
 title: Gurak_ale2

@@ -2,13 +2,13 @@
 tags:
 position: -119,-165
 ---
-Blue: Fosj kuejmd wriion brijon!!! 
-Blue: Brijon brijon! Fosj!!
+Creature: Fosj kuejmd wriion brijon!!! 
+Creature: Brijon brijon! Fosj!!
 The creature waves its sword uncomfortably close to your face and points at the money pouch in your belt.
 You get the feeling you are being robbed.
 -> Give the creature your pouch of money.
 <<GetMoney GameManager -20>>
-Blue: Hehehehehe Brijon! 
+Creature: Hehehehehe Brijon! 
 <<LeaveChar GameManager BluuSword>>
 The creature runs of with your money. 
 You have been robbed, a nice start to the evening. 

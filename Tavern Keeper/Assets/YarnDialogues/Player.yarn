@@ -2,9 +2,8 @@
 tags:
 ---
 <<GetMoney GameManager 20>>
-Hawawa, another day, another guest spawning hopefully. 
+Another uneventful day... Hopefully there will be some people this evening.
+...even though it's just tuesday. 
 <<EnterChar GameManager "BluuSword" CharHolderBar>>
-//<<EnterChar GameManager "Greg" CharHolder1_1>>
-//And just like that, he's gone!
-//<<LeaveChar GameManager Greg>>
+
 ===
