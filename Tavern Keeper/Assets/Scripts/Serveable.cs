@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Serveable : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler//, IDropHandler
+public class Serveable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler//, IDropHandler
 {
 
     private Canvas canvas; 
@@ -18,9 +18,6 @@ public class Serveable : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     void Start()
     {
         canvas = GameObject.FindGameObjectWithTag("DragNDrop").GetComponent<Canvas>();
-        //inventory = GameObject.FindGameObjectWithTag("gameManager").GetComponent<Inventory>(); // Gamemanager is the one holding our inventory
-        //Button btn = this.GetComponent<Button>();
-        //btn.onClick.AddListener(onMouseDown);   
     }
     private void Awake(){
         rectTransform = GetComponent<RectTransform>();
@@ -38,21 +35,5 @@ public class Serveable : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     public void OnEndDrag(PointerEventData eventData){
         canvasGroup.blocksRaycasts = true;
         rectTransform.anchoredPosition = new Vector2(0,0); //resets position. Needs to be negated if dragged elsewhere
-    }
-
-    public void OnPointerDown(PointerEventData eventData){
-    }
-
-
-//Below is not used right now
-
-    void SelectFoodOnClick(){
-        //Debug.Log("thingy clicked on :)");
-
-    }
-
-    void GiveFoodOnClick(){
-        //inventory.setFull(i, false);
-        //Destroy(gameObject); 
     }
 }

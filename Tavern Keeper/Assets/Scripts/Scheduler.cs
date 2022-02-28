@@ -10,9 +10,6 @@ public class Scheduler : MonoBehaviour
     public GameObject[] places;
     public Text moneyCounter; 
     public int money; 
-    void Awake(){
-        //EnterChar("Greg", places[1]);
-    }
 
     [YarnCommand("EnterChar")]
     public void EnterChar(string charName, GameObject location){ //Instantiates character and changes its Name, conversation Start Node, and Image based on charName
