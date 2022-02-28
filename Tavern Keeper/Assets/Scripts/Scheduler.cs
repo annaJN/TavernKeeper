@@ -25,5 +25,12 @@ public class Scheduler : MonoBehaviour
         character.transform.parent.GetChild(0).GetComponent<Image>().color = new Color(255, 255, 255, 1f); 
 
     }
+
+    [YarnCommand("LeaveChar")]
+    public void LeaveChar(GameObject character){
+        character.transform.parent.GetChild(0).GetComponent<Image>().sprite = null; //sets sprite in tavern
+        character.transform.parent.GetChild(0).GetComponent<Image>().color = new Color(255, 255, 255, 0f); 
+        GameObject.Destroy(character);
+    }
     
 }
