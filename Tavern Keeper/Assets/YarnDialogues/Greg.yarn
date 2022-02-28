@@ -35,6 +35,7 @@ title: Greg_ale
 ---
 Greg: Thank you! 
 <<SetOrder Greg 0>>
+<<EnterChar GameManager "bluuSword" CharHolderBar>>
 // -> Uhm... about the payment...
 // Greg: Oh, yes, right. Of course.
 // Greg: Wait...
