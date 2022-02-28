@@ -29,7 +29,7 @@ A blue creature stands before you, it seems familiar.
 Blue: Hin hin. Woib? 
 The creature clicks a pouch of money and points at the soup. 
 Your pouch of money. 
-(Maybe I could give them some soup or ale to get my money back. Or ask one of the adventurers to help me out.)
+(Maybe I could give them some soup or ale to get my money back. Or ask one of the adventurers to help me take it back.)
 <<set $BluuServed to 0>>
 <<SetOrder BluuMoney 2>>
 

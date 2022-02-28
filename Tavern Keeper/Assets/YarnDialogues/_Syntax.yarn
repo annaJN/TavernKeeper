@@ -12,5 +12,6 @@ tags:
 <<set $NameServed to 0>> //this one will be set to 1 when the character is served the right object. 
 
 <<GetMoney GameManager 5>> //Gives 5 money, or any other int you choose. 
+//can also take money with a negativ int, ex -5
 
 ===
