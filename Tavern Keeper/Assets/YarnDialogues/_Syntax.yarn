@@ -1,0 +1,16 @@
+﻿title: _Syntax
+tags:
+---
+//our Copy-paste Bible :)
+
+<<EnterChar GameManager "Name" CharHolder1_1>> //Enter char spawns character named "Name". 1_1 means table 1, place 1 (left side, 2 is right side). 
+//GameObject, image, and Conversation Start Node will all be named "Name", so make sure itś consistent. 
+
+<<LeaveChar GameManager Name>> //Deletes the Name game object (and makes them not display in tavern). Name is now a GameObject, not a string.
+
+<<SetOrder Name 1>> //Sets the object the character can accept when served. 1 is ale, 2 is soup. 0 is nothing.
+<<set $NameServed to 0>> //this one will be set to 1 when the character is served the right object. 
+
+<<GetMoney GameManager 5>> //Gives 5 money, or any other int you choose. 
+
+===

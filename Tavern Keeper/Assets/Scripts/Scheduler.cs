@@ -8,6 +8,8 @@ public class Scheduler : MonoBehaviour
 {
     public GameObject charTemplate;
     public GameObject[] places;
+    public Text moneyCounter; 
+    public int money; 
     void Awake(){
         //EnterChar("Greg", places[1]);
     }
@@ -31,6 +33,12 @@ public class Scheduler : MonoBehaviour
         character.transform.parent.GetChild(0).GetComponent<Image>().sprite = null; //sets sprite in tavern
         character.transform.parent.GetChild(0).GetComponent<Image>().color = new Color(255, 255, 255, 0f); 
         GameObject.Destroy(character);
+    }
+
+    [YarnCommand("GetMoney")]
+    public void GetMoney(int incomingMoney){
+        money += incomingMoney; 
+        moneyCounter.text = money.ToString(); 
     }
     
 }

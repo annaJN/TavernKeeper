@@ -1,16 +1,31 @@
 ﻿title: BluuSword
 tags:
-position: 0,0.5
+position: -119,-165
 ---
 Blue: Fosj kuejmd wriion brijon!!! 
 Blue: Brijon brijon! Fosj!!
 The creature waves its sword uncomfortably close to your face and points at the money pouch in your belt.
 You get the feeling you are being robbed.
 -> Give the creature your pouch of money.
+<<GetMoney GameManager -20>>
 Blue: Hehehehehe Brijon! 
 <<LeaveChar GameManager BluuSword>>
 The creature runs of with your money. 
 You have been robbed, a nice start to the evening. 
 (Hopefully I can earn back the money today. I should check if there are any customers yet.) 
+<<EnterChar GameManager "Greg" CharHolder1_1>>
 
+===
+
+title: BluuMoney
+tags: 
+position: 5,-49
+---
+A blue creature stands before you, it seems familiar. 
+Blue: Hin hin. Woib? 
+The creature clicks a pouch of money and points at the soup. 
+Your pouch of money. 
+-> Call for help to catch the creature
+-> Give them some soup  
+    
 ===
