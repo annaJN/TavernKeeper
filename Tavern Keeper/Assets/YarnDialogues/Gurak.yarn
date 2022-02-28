@@ -1,0 +1,48 @@
+﻿title: Gurak
+tags:
+---
+The Orc looks weathered and tired. 
+You contemplate whether you should ask him to please put on a shirt, but he looks a little irrate. 
+...plus he's twice your size, so maybe not.
+-> "Hello, can I take your order?"
+Orc: Yes. 
+Orc: Ale. 
+Orc: ...
+Orc: ...Please.
+<<set $GregServed to 0>>
+<<SetOrder Greg 1>> 
+<<SetStartNode Gurak "Gurak_waiting">>
+
+===
+title: Gurak_waiting
+---
+<<if $GurakServed == 1>>
+    <<Jump Gurak_ale>>
+<<endif>>
+Gurak: Where is my ale?
+-> "Coming right up!"
+(I can get an ale in the bar, and serve it by dragging it to him.)
+
+===
+title: Gurak_ale
+---
+<<SetOrder Greg 0>>
+The Orc looks tense, and is constantly glancing at the door. 
+You put the ale down on the table. 
+Greg: Ah, finally.
+ -> "Uhm... That would be 5 slugs."
+Gurak: Oh, yes, right. Of course.
+Gurak: Wait...
+Gurak: ...
+The orc rummages through a bag by his feet, getting increasingly frustrated. 
+Gurak: ...there.
+<<GetMoney GameManager 5>>
+Gurak: Here. 5 slugs.
+-> "Have a nice evening." 
+<<SetStartNode Gurak "Gurak_ale2">>
+===
+
+title: Gurak_ale2
+---
+Och här ska det vara dialog om hans förflutna lol och mer story.
+===

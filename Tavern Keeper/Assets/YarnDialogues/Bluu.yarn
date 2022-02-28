@@ -13,7 +13,7 @@ Blue: Hehehehehe Brijon!
 The creature runs of with your money. 
 You have been robbed, a nice start to the evening. 
 (Hopefully I can earn back the money today. I should check if there are any customers here yet.) 
-<<EnterChar GameManager "Greg" CharHolder1_1>>
+<<EnterChar GameManager "Gurak" CharHolder1_1>>
 
 ===
 
