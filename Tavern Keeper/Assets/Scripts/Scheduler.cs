@@ -7,9 +7,9 @@ using Yarn.Unity;
 public class Scheduler : MonoBehaviour
 {
     public GameObject charTemplate;
-    public GameObject place;
+    public GameObject[] places;
     void Awake(){
-        EnterChar("Greg", place);
+        //EnterChar("Greg", places[1]);
     }
 
     [YarnCommand("EnterChar")]
@@ -17,8 +17,13 @@ public class Scheduler : MonoBehaviour
         GameObject character = Instantiate(charTemplate, location.transform, false);
         character.name = charName;
         character.GetComponent<YarnInteractable>().conversationStartNode = charName;
+
         Sprite sprite = Resources.Load<Sprite>("Characters/" + charName);
-        character.GetComponent<Image>().sprite = sprite;
+        character.GetComponent<SpriteRenderer>().sprite = sprite;
+
+        character.transform.parent.GetChild(0).GetComponent<Image>().sprite = sprite; //sets sprite in tavern
+        character.transform.parent.GetChild(0).GetComponent<Image>().color = new Color(255, 255, 255, 1f); 
+
     }
     
 }

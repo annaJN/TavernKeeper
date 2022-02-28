@@ -21,21 +21,29 @@ public class MovementManager : MonoBehaviour
 
     //move camera to kitchen
     public void ToBarKitchen(){
-        Camera.main.transform.position = new Vector3(28, -4.5f, -10);
-        Button_toTavern.SetActive(true); //make back-button visible
+        if (!dialogueRunner.IsDialogueRunning) {
+            Camera.main.transform.position = new Vector3(28, -4.5f, -10);
+            Button_toTavern.SetActive(true); //make back-button visible
+        }
     }
 
     //move to a table. Should be changed to move to several tables
     public void ToTable1(){
-        Camera.main.transform.position = new Vector3(48, -4.5f, -10);
-        Button_toTavern.SetActive(true); //make back-button visible
+        if (!dialogueRunner.IsDialogueRunning) {
+            Camera.main.transform.position = new Vector3(48, -4.5f, -10);
+            Button_toTavern.SetActive(true); //make back-button visible
+        }
     }
-        public void ToTable2(){
-        Camera.main.transform.position = new Vector3(48, -14.5f, -10);
-        Button_toTavern.SetActive(true); //make back-button visible
+    public void ToTable2(){
+        if (!dialogueRunner.IsDialogueRunning) {
+            Camera.main.transform.position = new Vector3(48, -14.5f, -10);
+            Button_toTavern.SetActive(true); //make back-button visible
+        }
     }
-        public void ToTable3(){
-        Camera.main.transform.position = new Vector3(48, -24.5f, -10);
-        Button_toTavern.SetActive(true); //make back-button visible
+    public void ToTable3(){
+        if (!dialogueRunner.IsDialogueRunning) {
+            Camera.main.transform.position = new Vector3(48, -24.5f, -10);
+            Button_toTavern.SetActive(true); //make back-button visible
+        }
     }
 }
