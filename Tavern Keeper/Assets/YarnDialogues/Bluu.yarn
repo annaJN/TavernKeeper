@@ -4,7 +4,13 @@ position: 0,0.5
 ---
 Blue: Fosj kuejmd wriion brijon!!! 
 Blue: Brijon brijon! Fosj!!
-Blue: *The creature points at a few gold coins at the bar*
-Player: *You are being robbed* 
-Player: (I should probably give him the coins)
+The creature waves its sword uncomfortably close to your face and points at the money pouch in your belt.
+You get the feeling you are being robbed.
+-> Give the creature your pouch of money.
+Blue: Hehehehehe Brijon! 
+<<LeaveChar GameManager BluuSword>>
+The creature runs of with your money. 
+You have been robbed, a nice start to the evening. 
+(Hopefully I can earn back the money today. I should check if there are any customers yet.) 
+
 ===

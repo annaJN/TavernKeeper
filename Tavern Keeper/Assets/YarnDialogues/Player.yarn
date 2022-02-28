@@ -2,7 +2,8 @@
 tags:
 ---
 Hawawa, another day, another guest spawning hopefully. 
-<<EnterChar GameManager "Greg" CharHolder1_1>>
-And just like that, he's gone!
-<<LeaveChar GameManager Greg>>
+<<EnterChar GameManager "BluuSword" CharHolderBar>>
+//<<EnterChar GameManager "Greg" CharHolder1_1>>
+//And just like that, he's gone!
+//<<LeaveChar GameManager Greg>>
 ===
