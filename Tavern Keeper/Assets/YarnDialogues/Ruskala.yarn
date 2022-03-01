@@ -11,11 +11,8 @@ Orc: ...green. You know.
     <<jump RuskalaYesOption>>
 -> "I have not seen anyone who matches that description."
     <<jump RuskalaNoOption>>
-
-<<if $talkedToGurak == 1 >>
-    -> "Uhm... Are you talking about Gurak?"
+-> "Uhm... Are you talking about Gurak?" <<if $talkedToGurak == 1 >>
     <<jump TalkedToGurakOption>>
-<<endif>>
 
 ===
 
@@ -69,10 +66,9 @@ tags:
     <<LeaveChar GameManager Ruskala>>
     <<EnterChar GameManager "Dumbledalf" CharHolder3_2>>
     <<SetStartNode GameManager Dumbledalf "Dumbledalf3">>
-<<if $talkedToGurak == 1 >>
-    -> "Is his name Gurak?"
+
+-> "Is his name Gurak?" <<if $talkedToGurak == 1 >>
     <<jump TalkedToGurakOption>>
-<<endif>>
 ===
 
 title: RuskalaNoOption
