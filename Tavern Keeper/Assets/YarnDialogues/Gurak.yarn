@@ -55,7 +55,7 @@ Orc: What you want?
 -> "Bad day today?"
 Orc: ...
 Orc: This my last drink. Leave me alone. 
-(...doesn't have to be his last drink.)
+(...it doesn't have to be his last drink.)
 <<set $GurakServed to 0>>
 <<SetOrder Gurak 1>>
 <<SetStartNode GameManager Gurak "Gurak_waiting3">>
@@ -67,7 +67,7 @@ position: -320,-168
     <<jump Gurak_ale2>>
 <<endif>>
 Orc: This my last drink. Leave me alone. 
-(It doesn't have to be your last drink, buddy...)
+(I could make it his next to last drink...)
 
 ===
 title: Gurak_ale2
