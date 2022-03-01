@@ -84,7 +84,7 @@ title: Ruskala_EndingAle
 ---
 <<SetOrder Ruskala 0>>
 Ruskala: Thanks. 
-<<if $bluuRan>>
+<<if $bluuRan == 1>>
     Orc: I found this on the way in.
     The orc gives you a money pouch. Your money pouch.
     There is some money missing, but at least you got some of it back. 

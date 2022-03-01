@@ -8,7 +8,12 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  LastImportHadImplicitStringIDs: 0
-  LastImportHadAnyStrings: 0
+  LastImportHadImplicitStringIDs: 1
+  LastImportHadAnyStrings: 1
   isSuccessfullyParsed: 1
-  parseErrorMessages: []
+  parseErrorMessages:
+  - "87:0: Error: Terms of 'if statement' must be Bool, not Number\r\n<<if $bluuRan>>\r\n   
+    Orc: I found this on the way in.\r\n    The orc gives you a money pouch. Your
+    money pouch.\r\n    There is some money missing, but at least you got some of
+    it back. \r\n    <<GetMoney GameManager 10>>\r\n    Orc: You can have it, as
+    payment, and as a thanks for earlier. \r\n\r\n"

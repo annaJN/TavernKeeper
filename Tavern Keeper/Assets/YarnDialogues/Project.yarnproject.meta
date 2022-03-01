@@ -14,6 +14,7 @@ ScriptedImporter:
   - {fileID: 6391573757903218779, guid: 999648f0964ff1159848fb9b7e87d683, type: 3}
   - {fileID: 6391573757903218779, guid: 8342b3e194b519c4c94699208937c96f, type: 3}
   - {fileID: 6391573757903218779, guid: 22dbf686e7ae837c599359c47679bbcf, type: 3}
+  - {fileID: 6391573757903218779, guid: 39b22b004b91d514bbe9b305d3534edc, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $BluuServed
@@ -22,6 +23,14 @@ ScriptedImporter:
     defaultValueNumber: 0
     defaultValueString: 
     description: Implicitly declared in Bluu.yarn, node BluuMoney
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: b14d735343adcbbf88f3d9fbde488fae, type: 3}
+  - name: $bluuRan
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Bluu.yarn, node BluuWaiting
     isImplicit: 1
     sourceYarnAsset: {fileID: 6391573757903218779, guid: b14d735343adcbbf88f3d9fbde488fae, type: 3}
   - name: $GurakServed
@@ -40,14 +49,38 @@ ScriptedImporter:
     description: Implicitly declared in Gurak.yarn, node Gurak_story
     isImplicit: 1
     sourceYarnAsset: {fileID: 6391573757903218779, guid: 5e494956a6cd1794593cea25581fda28, type: 3}
-  - name: $DumbledalfServedSoup
+  - name: $checked
     typeName: Number
     defaultValueBool: 0
     defaultValueNumber: 0
     defaultValueString: 
-    description: Implicitly declared in Dumbledalf.yarn, node DumbledalfMeeting2
+    description: Implicitly declared in Gurak.yarn, node Gurak_story
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 5e494956a6cd1794593cea25581fda28, type: 3}
+  - name: $DumbledalfServed
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Dumbledalf.yarn, node Dumbledalf
     isImplicit: 1
     sourceYarnAsset: {fileID: 6391573757903218779, guid: 999648f0964ff1159848fb9b7e87d683, type: 3}
+  - name: $bowl
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Dumbledalf.yarn, node Dumbledalf_waiting2
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 999648f0964ff1159848fb9b7e87d683, type: 3}
+  - name: $TalkedToRuskala
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Ruskala.yarn, node TalkedToGurakOption
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 8342b3e194b519c4c94699208937c96f, type: 3}
   defaultLanguage: en
   languagesToSourceAssets: []
   useAddressableAssets: 0
