@@ -1,6 +1,50 @@
 ﻿title: Ruskala
 tags:
 ---
-Orc: 
+Orc: You there!
+Orc: Have you seen a big orc man around here? 
+Orc: Large, bald, wearing armour with a crest. A mix of a 
+Orc: ...green. You know. 
+The description matches the Orc that was here before, all except the armour. 
+Perhaps that's why he was bare chested. To hide. 
+-> Yes. 
+    <<jump RuskalaYesOption>>
+-> No.
+    <<jump RuskalaNoOption>>
 
+<<if $talkedToGurak == 1 >>
+    -> Uhm... Are you talking about Gurak?
+    <<jump TalkedToGurakOption>>
+<<endif>>
+
+===
+
+title: TalkedToGurakOption
+tags:
+---    
+    Orc: Yes!
+    Orc: How do you know his name? You talked to him? 
+    -> Stay Silent. 
+    -> Nod.  
+===
+
+title: RuskalaYesOption
+tags:
+---    
+ Orc: Tell me more. Did you talk to him? Do you know where he whent? 
+ Orc: He is very dangerous. I am here to bring him back to our town, to justice. 
+ -> Tell her about him. 
+ He was here for an ale, seemd worried. 
+
+===
+
+title: RuskalaNoOption
+tags:
+--- 
+I have not seen anyone who matches that description.
+(Exactly that description.)
+Orc: Well. If you see him be careful. He is very dangerous. 
+Orc: For your time. 
+<<GetMoney GameManager 2>>    
+ 
 ===
