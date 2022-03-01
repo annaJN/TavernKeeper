@@ -140,7 +140,7 @@ Dumbledalf: Yes! It's dangerous to be physically present instead of being-
 <<LeaveChar GameManager Dumbledalf>>
 The wizard vanishes. Again with the bowl. 
 
-<<EnterChar GameManager "Ruskala" CharHolder2_2>>
+<<EnterChar GameManager "Ruskala" CharHolderBar>>
 
 ===
 title: Dumbledalf3
