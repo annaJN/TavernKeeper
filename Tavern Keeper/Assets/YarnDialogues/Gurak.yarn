@@ -38,7 +38,7 @@ Orc: Oh, yes, right. Of course.
 Orc: Wait...
 Orc: ...
 The orc rummages through a bag by his feet, getting increasingly frustrated. 
-Finally he finds a pouch and pours out its contents on the table: 5 slugs exactly.
+Finally he finds a pouch and pours out its contents on the table; 5 slugs exactly.
 <<GetMoney GameManager 5>>
 Orc: ...there.
 -> "Have a nice evening." 

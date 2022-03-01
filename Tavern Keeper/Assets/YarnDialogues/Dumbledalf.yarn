@@ -76,14 +76,14 @@ Dumbledalf: We meet again, fellow human!
 -> ...
 Dumbledalf: You know its dangerous to be alone out there, better to have a job here than be an adventurer! //Legend of Zelda
 Dumbledalf: Also! I am in need of some more soup. My master requires it. 
-<<set $DumbledalfServedSoup to 0>>
+<<set $DumbledalfServed to 0>>
 <<SetOrder Dumbledalf 2>>
 <<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting2">>
 
 ===
 title: Dumbledalf_waiting2
 ---
-<<if $DumbledalfServedSoup == 1>>
+<<if $DumbledalfServed == 1>>
     <<jump Dumbledalf_Soup2>>
 <<endif>>
 -> "Can I have my bowl back?"
@@ -95,7 +95,7 @@ He gives you the bowl. To your surprise, it's cleanier than it has ever been.
 ===
 title: Dumbledalf_waiting2.2
 ---
-<<if $DumbledalfServedSoup == 1>>
+<<if $DumbledalfServed == 1>>
     <<jump Dumbledalf_Soup2>>
 <<endif>>
 Dumbledalf: Soup soup.
