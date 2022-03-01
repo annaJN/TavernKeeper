@@ -1,0 +1,25 @@
+﻿title: Ending
+---
+<<if $TalkedToRusalka == 1>>
+    <<jump Gurak_Ending>>
+<<else>>
+    <<jump Rusalka_Ending>>
+<<endif>>
+
+===
+title: Gurak_Ending
+---
+<<EnterChar GameManager "Gurak" CharHolder1_1>>
+<<SetStartNode GameManager Gurak Gurak_Ending>>
+<<EnterChar GameManager "Rusalka" CharHolder1_2>>
+<<SetStartNode GameManager Rusalka Gurak_Ending>>
+$bluuRan
+
+===
+title: Rusalka_Ending
+---
+<<EnterChar GameManager "Rusalka" CharHolder1_1>>
+<<SetStartNode GameManager Rusalka Rusalka_Ending>>
+$bluuRan
+
+===

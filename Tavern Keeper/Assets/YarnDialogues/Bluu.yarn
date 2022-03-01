@@ -18,7 +18,6 @@ You have been robbed, a nice start to the evening.
 ===
 
 title: BluuMoney
-tags: 
 position: 5,-49
 ---
 <<if $BluuServed == 1>>
@@ -26,20 +25,46 @@ position: 5,-49
 <<endif>>
 
 A blue creature stands before you, it seems familiar. 
-Blue: Hin hin. Woib? 
+Creature: Hin hin. Woib? 
 The creature clicks a pouch of money and points at the soup. 
 Your pouch of money. 
-(Maybe I could give them some soup or ale to get my money back. Or ask one of the adventurers to help me take it back.)
+Creature: Woib...?
 <<set $BluuServed to 0>>
 <<SetOrder BluuMoney 2>>
 
+===
+title: BluuWaiting
+---
+<<if $BluuServed == 1>>
+    <<jump BluuSoup>>
+<<endif>>
+Creature: Woib!
+The creature points at the soup. 
+-> You stole my money! Give it back!
+    Creature: Eek!!
+    As you yell at the creature it seems scared and makes a run for the door. 
+    It's fast and nimble, and gets away easily.
+    <<LeaveChar GameManager BluuMoney>>
+    (There goes my money... Again.) 
+    <<set $bluuRan = 1>>
+    <<jump Ending>>
+-> (Maybe I should give it some food...)
     
 ===
-
-Title: BluuSoup
+title: BluuSoup
 ---
 The creature smiles and begins to eat with vigor. 
 He pour out the gold on the counter but keeps the pouch. 
 <<GetMoney GameManager 20>>
 (At least I got the gold back.)
+<<SetStartNode GameManager Dumbledalf "BluuHappy">>
+<<jump Ending>>
+===
+title: BluuHappy
+---
+The creature empties the bowl into it's mouth and lets out a burp.
+Creature: Hin hin! Zoga! 
+Then it promplty falls alseep.
+    <<LeaveChar GameManager BluuMoney>>
+...on the floor. 
 ===
