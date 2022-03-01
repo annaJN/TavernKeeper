@@ -11,7 +11,7 @@ Orc: ...green. You know.
     <<jump RuskalaYesOption>>
 -> "I have not seen anyone who matches that description."
     <<jump RuskalaNoOption>>
--> "Uhm... Are you talking about Gurak?" <<if $talkedToGurak == 1 >>
+-> "Are you talking about Gurak?" <<if $talkedToGurak == 1 >>
     <<jump TalkedToGurakOption>>
 
 ===
@@ -20,18 +20,19 @@ title: TalkedToGurakOption
 tags:
 ---    
 Orc: Yes!
-Orc: Tell me where he went. Quick. 
+Orc: Tell me where he went. Quickly.
+Orc: He's dangerous. 
 ->"He went out the door, no windows here so don't know which direction."
     Orc: Thank you the information. Here.
     <<GetMoney GameManager 2>> 
     She gives you two coin as she leaves for the door. 
     <<LeaveChar GameManager Ruskala>>
 
--> (Lie.) "He said he was going to find the nearest harbour and find a ship." 
-    Orc: Thank you the information. Here.
-    <<GetMoney GameManager 2>> 
-    She gives you two coin as she leaves for the door. 
-    <<LeaveChar GameManager Ruskala>>
+// -> (Lie.) "He said he was going to find the nearest harbour and find a ship." 
+//     Orc: Thank you the information. Here.
+//     <<GetMoney GameManager 2>> 
+//     She gives you two coin as she leaves for the door. 
+//     <<LeaveChar GameManager Ruskala>>
 
 -> "He told me what happened. I don't think he is dangerous."
     Orc: ...
@@ -58,7 +59,9 @@ title: RuskalaYesOption
 tags:
 ---    
  Orc: Tell me more. Did you talk to him? Do you know where he whent? 
- Orc: He is very dangerous. I am here to bring him back to our, no MY clan, to justice. 
+ Orc: I am here to bring him back to our, no MY clan, to justice. 
+ (I could just tell her what I know.)
+ (Or I could try to make her see reason.)
 -> "He finished up and left. Don't know where to."
     Orc: Thank you the information. Here.
     <<GetMoney GameManager 2>> 
@@ -74,7 +77,7 @@ tags:
 title: RuskalaNoOption
 tags:
 --- 
-(Not exactly that that description, anyway...)
+(Not exactly that description, anyway...)
 Orc: Well. If you see him be careful. He is very dangerous. 
 Orc: For your time. 
 <<GetMoney GameManager 2>>    

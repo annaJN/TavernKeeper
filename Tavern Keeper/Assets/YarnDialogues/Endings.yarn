@@ -83,13 +83,13 @@ Orc: Get me an ale.
 title: Ruskala_EndingAle
 ---
 <<SetOrder Ruskala 0>>
-Ruskala: Thanks. 
+Orc: Thanks. 
 <<if $bluuRan == 1>>
     Orc: I found this on the way in.
     The orc gives you a money pouch. Your money pouch.
     There is some money missing, but at least you got some of it back. 
     <<GetMoney GameManager 10>>
-    Orc: You can have it, as payment, and as a thanks for earlier. 
+    Orc: You can have it, as payment. 
 <<else>>
     The orc puts five coins on the table. 
     <<GetMoney GameManager 5>>
