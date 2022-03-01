@@ -10,7 +10,7 @@ You get the feeling you are being robbed.
 <<GetMoney GameManager -20>>
 Creature: Hehehehehe Brijon! 
 <<LeaveChar GameManager BluuSword>>
-The creature runs of with your money. 
+The creature runs off with your money. 
 You have been robbed, a nice start to the evening. 
 (Hopefully I can earn back the money today. I should check if there are any customers here yet.) 
 <<EnterChar GameManager "Gurak" CharHolder1_1>>

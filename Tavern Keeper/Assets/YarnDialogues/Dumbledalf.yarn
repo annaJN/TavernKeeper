@@ -2,8 +2,8 @@
 tags:
 ---
 Dumbledalf: Hello there! 
-Dumbledalf: Tell me. Do you serve ale at this...
-Dumbledalf: ...establishment. 
+Dumbledalf: Now tell me. Do you mayhaps serve ale at this...
+Dumbledalf: ...establishment! 
 The wizard speaks with a shrill voice, used to teeling people what to do. 
 -> Of course, It'll be right up. 
 
@@ -17,8 +17,8 @@ tags:
 <<endif>>
 
 Dumbledalf: Hello Hello! 
-Dumbledalf: You know its dangerous to be alone out there, better to have a job here than be an adventurer.
-Dumbledalf: Also! I need some soup. My master requires it. 
+Dumbledalf: You know its dangerous to be alone out there, better to have a job here than be an adventurer!
+Dumbledalf: Also! I am in need of some soup. My master requires it. 
 <<set $DumbledalfServedSoup to 0>>
 <<SetOrder Dumbledalf 2>>
 

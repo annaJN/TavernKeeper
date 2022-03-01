@@ -1,5 +1,6 @@
 ﻿title: Gurak
 tags:
+position: -741,-225
 ---
 The Orc looks weathered and tired. 
 You contemplate whether you should ask him to please put on a shirt, but he looks a little irrate. 
@@ -15,34 +16,129 @@ Orc: ...Please.
 
 ===
 title: Gurak_waiting
+position: -739,-171
 ---
 <<if $GurakServed == 1>>
     <<jump Gurak_ale>>
 <<endif>>
-Gurak: Where is my ale?
+Orc: Where is my ale?
 -> "Coming right up!"
 (I can get an ale in the bar, and serve it by dragging it to him.)
 
 ===
 title: Gurak_ale
+position: -507,-170
 ---
 <<SetOrder Gurak 0>>
 The Orc looks tense, and is constantly glancing at the door. 
 You put the ale down on the table. 
-Gurak: Ah, finally.
+Orc: Ah, finally.
  -> "Uhm... That would be 5 slugs."
-Gurak: Oh, yes, right. Of course.
-Gurak: Wait...
-Gurak: ...
+Orc: Oh, yes, right. Of course.
+Orc: Wait...
+Orc: ...
 The orc rummages through a bag by his feet, getting increasingly frustrated. 
-Gurak: ...there.
+Finally he finds a pouch and pours out its contents on the table: 5 slugs exactly.
 <<GetMoney GameManager 5>>
-Gurak: Here. 5 slugs.
+Orc: ...there.
 -> "Have a nice evening." 
-<<SetStartNode GameManager Gurak "Gurak_ale2">>
-===
+<<SetStartNode GameManager Gurak "Gurak_waiting2">>
 
-title: Gurak_ale2
+===
+title: Gurak_waiting2
+position: -318,-222
 ---
-Och här ska det vara dialog om hans förflutna lol och mer story.
+The Orc is drinking his ale slowly, savoring it. 
+His eyes are flickering towards the door every now and again, then looking at you. 
+Orc: What you want? 
+-> "Bad day today?"
+Orc: ...
+Orc: This my last drink. Leave me alone. 
+(...doesn't have to be his last drink.)
+<<set $GurakServed to 0>>
+<<SetOrder Gurak 1>>
+<<SetStartNode GameManager Gurak "Gurak_waiting3">>
+===
+title: Gurak_waiting3
+position: -320,-168
+---
+<<if $GurakServed == 1>>
+    <<jump Gurak_ale2>>
+<<endif>>
+Orc: This my last drink. Leave me alone. 
+(It doesn't have to be your last drink, buddy...)
+
+===
+title: Gurak_ale2
+position: -93,-167
+---
+<<SetOrder Gurak 0>>
+-> "Here, have one on the house." 
+Orc: ..?
+He looks at the tankard in disbelief. 
+Orc: This some kind of trick?
+-> "I just didn't want that to be your last drink."
+Orc: I see... 
+Orc: So this is kindness from stranger. 
+Orc: Kindness is rare thing where I come from. 
+-> "Want to talk about it?"
+-> "I'll leave you to it then."
+Orc: ...
+Orc: You would not understand. 
+-> "Try me"
+    <<jump Gurak_story>>
+-> "If you say so"
+<<SetStartNode GameManager Gurak "Gurak_nostory">>
+
+===
+title: Gurak_nostory
+position: 106,-190
+---
+Orc: ...
+Orc: Thank you for ale.
+-> "How did you end up here?"
+    <<jump Gurak_story>>
+-> "Happy to help"
+
+===
+title: Gurak_story
+position: 164,-99
+---
+Orc: I am Gurak. 
+Gurak: I come from clan west of here. 
+Gurak: ... 
+Gurak: An orc clan. 
+Gurak: But I brought dishonor on my clan. 
+Gurak: And now they have to hunt me to restore honor. 
+Gurak: That is what our god says. 
+-> "What did you do?"
+Gurak: ...
+Gurak: I was weak.
+Gurak: I took pity on gnome. 
+Gurak: It was weak and I helped it. 
+-> "Sounds like you did a good thing."
+Gurak: ...
+Gurak: You don't understand.
+Gurak: Mercy is dishonor. 
+Gurak: I am dishonor.
+Gurak: My brothers and sisters would never.
+-> "Maybe because ther are afraid of getting exiled?"
+Gurak: Afraid? No.
+Gurak: Orcs are not afraid.
+Gurak: ...
+The Orc seems to contemplate your words.
+Gurak: ...Are they afraid? 
+Gurak: ...
+Gurak: I need quiet.
+-> "I'll leave you to your ale then."
+<<set $talkedToGurak = 1>>
+<<SetStartNode GameManager Gurak "Gurak_end">>
+===
+title: Gurak_end
+position: 374,-143
+---
+The Orc seems to be reflecting upon things. 
+Gurak: Now I have talked much.
+Gurak: Now I need quiet. 
+Gurak: Thank you for ale. 
 ===
