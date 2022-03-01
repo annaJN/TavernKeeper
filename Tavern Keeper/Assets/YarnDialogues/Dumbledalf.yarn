@@ -80,9 +80,10 @@ Dumbledalf: Now I must go...
 Dumbledalf: ...to a table! Please come serve me over there!
 <<LeaveChar GameManager Dumbledalf>>
 <<EnterChar GameManager "Dumbledalf" CharHolder2_2>>
-<<SetStartNode GameManager Dumbledalf "Dumbledalf2Table">>
+... //Don't remove. It solves bug. Don't know why.
+<<SetStartNode GameManager Dumbledalf "DumbledalfTable">>
 ===
-title: Dumbledalf2Table
+title: DumbledalfTable
 ---
 Dumbledalf: Hello there! I am Dumbledalf, the wizard!
 (I knew that already...)
