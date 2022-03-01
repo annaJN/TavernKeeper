@@ -220,5 +220,5 @@ Dumbledalf: Thank you!
 <<LeaveChar GameManager Dumbledalf>>
 The wizard and soup vanishes, but the bowl remains on the table.
 (Hm. That could get messy...)
-<<EnterChar GameManager "BlueMoney">>
+<<EnterChar GameManager "BlueMoney" CharHolderBar>>
 ===
