@@ -1,4 +1,4 @@
-﻿title: Player
+﻿title: PlayerStart
 tags:
 ---
 <<GetMoney GameManager 20>>
@@ -6,4 +6,11 @@ Another uneventful day... Hopefully there will be some people this evening.
 ...even though it's just tuesday. 
 <<EnterChar GameManager "BluuSword" CharHolderBar>>
 
+===
+
+title: PutThingsBackTips
+tags:
+---
+Right, if I take to much ale or soup I can always put it back where I took it from. 
+Don't want to let anything go to waste. 
 ===
