@@ -22,10 +22,39 @@ Orc: ...green. You know.
 title: TalkedToGurakOption
 tags:
 ---    
-    Orc: Yes!
-    Orc: He told you his name?
-    -> Stay Silent. 
-    -> Nod.  
+Orc: Yes!
+Orc: Tell me where he went. Quick. 
+-> Tell her what you know. 
+"He went out the door, no windows here so don't know which direction."
+Orc: Thank you the information. Here.
+<<GetMoney GameManager 2>> 
+She gives you two coin as she leaves for the door. 
+<<LeaveChar GameManager Ruskala>>
+
+-> Lie. 
+"He said he was going to find the nearest harbour and find a ship." 
+Orc: Thank you the information. Here.
+<<GetMoney GameManager 2>> 
+She gives you two coin as she leaves for the door. 
+<<LeaveChar GameManager Ruskala>>
+
+-> Tell her you think he is not dangerous. 
+"He told me what happened. I don't think he is dangerous."
+"He seems like a nice person, whatever justice is waiting for him. I don't think he deserves it."
+The orc stares at you, listening intently. 
+"Maybe..."
+"Just hear him out."
+Orc: ...
+Orc: Maybe I will... 
+Orc: ...maybe I will not.  
+Orc: For the information.
+<<GetMoney GameManager 4>> 
+She gives you four coin. She stands up and hesitates, looking at you. 
+Then shakes her head and leves. 
+<<LeaveChar GameManager Ruskala>>
+(...)
+(Wonder what will happen to those two.) 
+//End - enter another character
 ===
 
 title: RuskalaYesOption
@@ -38,7 +67,9 @@ tags:
     "He finished up and left. Don't know exactly where to."
     Orc: Thank you the information. Here.
     <<GetMoney GameManager 2>> 
-    She gives you two coin.
+    She gives you two coin as she leaves for the door. 
+    <<LeaveChar GameManager Ruskala>>
+    //End - enter another character
 <<if $talkedToGurak == 1 >>
     -> "Is his name Gurak?"
     <<jump TalkedToGurakOption>>
@@ -53,5 +84,7 @@ tags:
 Orc: Well. If you see him be careful. He is very dangerous. 
 Orc: For your time. 
 <<GetMoney GameManager 2>>    
- She gives you two coin. 
+ She gives you two coin as she leaves for the door. 
+ <<LeaveChar GameManager Ruskala>>
+ //End - enter another character
 ===
