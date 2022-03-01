@@ -13,49 +13,183 @@ Dumbledalf: Surely you've heard of me!
     ->(I think you mean ingenious...)
 Dumbledalf: Now tell me. Do you mayhaps serve ale at this...
 Dumbledalf: ...establishment! 
-The wizard speaks with a shrill voice, used to teeling people what to do. 
+The wizard speaks with a shrill voice, used to telling people what to do. 
 ->"Of course, It'll be right up."
+Dumbledalf: Ohoho, nonono! 
+Dumbledalf: That will not do!
+Dumbledalf: Numbing the pain for a while will make it worse when you finally feel it. //Dumbledore
+Dumbledalf: No, we shall have something to eat instead! 
+Dumbledalf: Can you manage that, boy? 
+-> Of cours-
+-> I'm actua-
+Dumbledalf: Splendid!
+<<set $DumbledalfServed to 0>>
+<<SetOrder Dumbledalf 2>>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting">>
 
 ===
-title: Dumbledalf_ale
+title: Dumbledalf_waiting
 ---
-Dumbledalf: I will take my leave now.
--> "Good evening then."
-Dumbledalf: What do you mean? 
--> "What?"
-Dumbledalf: Do you wish me a good evening, or mean that it is a good evening whether I want it or not;
-Dumbledalf: or that you feel good this evening; 
-Dumbledalf: or that it is an evening to be good on?
--> "Uhhh..."
-    Dumbledalf: Well no matter.
--> "All of them, at once!"
-    Dumbledalf: Aha! How interesting.
-    Dumbledalf: Then 'good evening' to you too. 
-Dumbledalf: I will take my leave.
-Dumbledalf: Be careful out there!
+<<if $DumbledalfServed == 1>>
+    <<jump Dumbledalf_Soup>>
+<<endif>>
+Dumbledalf: A dark power has found its way back into the world... //Radagast
+(What is he talking about??)
+-> Sorry, what did you say that you ordered?
+Dumbledalf: Questions! So many questions! //Merlin
+Dumbledalf: Soup! Sustinance is required, you see! 
+
+===
+title: Dumbledalf_Soup
+---
+<<SetOrder Dumbledalf 0>>
+Dumbledalf: Ohoho hothothot...
+<<GetMoney GameManager 5>>
+Dumbledalf: Thank you, I must be going now. 
 <<LeaveChar GameManager Dumbledalf>>
-(But I'm not going out there...)
+The wizard vanishes into thin air, with soup, bowl and everything. 
+->"Wait-!"
+...
+(Well that sets me back one bowl...)
+
+//waiting dialogue here!!
 
 ===
 title: Dumbledalf2
 ---
-<<if $DumbledalfServedSoup == 1>>
-    <<jump DumbledalGotSoup>>
-<<endif>>
 
-Dumbledalf: Hello Hello! 
-Dumbledalf: You know its dangerous to be alone out there, better to have a job here than be an adventurer!
-Dumbledalf: Also! I am in need of some soup. My master requires it. 
+Dumbledalf: Hello Hello!
+Dumbledalf: We meet again, fellow human!
+-> "That's an odd thing to sa-"
+-> "I'm not really huma-"
+-> ...
+Dumbledalf: You know its dangerous to be alone out there, better to have a job here than be an adventurer! //Legend of Zelda
+Dumbledalf: Also! I am in need of some more soup. My master requires it. 
 <<set $DumbledalfServedSoup to 0>>
 <<SetOrder Dumbledalf 2>>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting2">>
+
+===
+title: Dumbledalf_waiting2
+---
+<<if $DumbledalfServedSoup == 1>>
+    <<jump Dumbledalf_Soup2>>
+<<endif>>
+-> "Can I have my bowl back?"
+Dumbledalf: Aha! Why yes! Yes you can!
+He gives you the bowl. To your surprise, it's cleanier than it has ever been.  
+<<Set $bowl == 1>>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting2.2">>
+
+===
+title: Dumbledalf_waiting2.2
+---
+<<if $DumbledalfServedSoup == 1>>
+    <<jump Dumbledalf_Soup2>>
+<<endif>>
+Dumbledalf: Soup soup.
+Dumbledalf: One can never have enough socks. //Dumbledore
+(This stopped making sense a long time ago...)
 
 ===
 
-title: Dumbledalf_Soup1
+title: Dumbledalf_Soup2
 ---
-Dumbledalf: Ohoho hothothot...
-Dumbledalf: Thank you, I must be going now. 
+<<SetOrder Dumbledalf 0>>
+Dumbledalf: Splendid!
+<<GetMoney GameManager 5>>
+Dumbledalf: I will take my leave now.
+-> "Good evening"
+Dumbledalf: What do you mean? 
+-> "...What?"
+Dumbledalf: Do you wish me a good evening, or mean that it is a good evening whether I want it or not;
+Dumbledalf: or that you feel good this evening; 
+Dumbledalf: or that it is an evening to be good on? //Gandalf
+-> "Uhhh..."
+    Dumbledalf: Well, no matter.
+-> "All of them, at once!"
+    Dumbledalf: Aha! How interesting.
+    Dumbledalf: Then 'good evening' to you too. 
+Dumbledalf: I will take my leave.
+Dumbledalf: Be careful out there in the real world!
+-> "The real world...?"
+Dumbledalf: Yes! It's dangerous to be physically present instead of being-
 <<LeaveChar GameManager Dumbledalf>>
-The wizard just vanishes into thin air, with soup, bowl and everything. Back to wherever he came from to give his master some soup probably.
-  
+The wizard vanishes. Again with the bowl. 
+
+===
+title: Dumbledalf3
+---
+Dumbledalf: Hello there! I'm Dumbledalf, the wizard!
+-> Yes, I know. 
+    Dumbledalf: Aha! You've heard of me!
+-> ...
+    Dumbledalf: Surely you've heard of me!
+Dumbledalf: Because I was here earlier! 
+Dumbledalf: And now I return! For I am on a quest! 
+Dumbledalf: A quest to return what is rightfully yours!
+<<if $bowl==1>>
+    Dumbledalf: Here is your bowl back!
+    He gives you the bowl. It's sparkling clean.
+<<else>>
+    Dumbledalf: Here are your bowls back!
+    He gives you the bowls. Thew are sparkling clean.
+<<endif>>
+Dumbledalf: All debts must be repayed! 
+Dumbledalf: And for your service this evening, I thank you.
+Dumbledalf: You have lost something this evening. 
+-> How did you know?
+-> Yes, I got robbed ...I think.
+Dumbledalf: Since I am the great wizard Dumbledalf, I shall grant you your losses back!
+7 gold coins appear on the bar.
+(I'm pretty sure I had more than this)
+(But who am I to complain)
+<<GetMoney GameManager 7>>
+-> Thank you.
+-> Thank you, oh kind wizard.
+    Dumbledalf: Oh no need to be so formal, young human.
+        -> I'm not a-
+        ->...
+Dumbledalf: I help those in need, simply out of the kindness in my heart. 
+Dumbledalf: And because I require sustinance... 
+-> ...
+    Dumbledalf: ...
+    Dumbledalf: *ahem*
+    Dumbledalf: I want some soup!
+    -> Coming right up!
+-> Coming right up!
+<<set $DumbledalfServedSoup to 0>>
+<<SetOrder Dumbledalf 2>>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting3">>
+
+===
+title: Dumbledalf_waiting3
+---
+<<if $DumbledalfServedSoup == 1>>
+    <<jump Dumbledalf_Soup3>>
+<<endif>>
+He seems to be humming something...
+Dumbledalf: Rockin', rockin' and rolling... Down to the beach I'm strolling...
+Dumbledalf: But the seagulls, poke at my head, not fun!
+Dumbledalf: I said seagulls... mrrh! Stop it now!
+<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting3.1">>
+
+===
+title: Dumbledalf_waiting3.1
+---
+<<if $DumbledalfServedSoup == 1>>
+    <<jump Dumbledalf_Soup3>>
+<<endif>>
+He seems to be humming something...
+Dumbledalf: Someday, when you get older... You could get hit by a boulder...
+Dumbledalf: When you're lying there, screming come help me please
+Dumbledalf: The seagulls, mrrh! Poke your knees!
+
+===
+title: Dumbledalf_Soup3
+---
+
+<<SetOrder Dumbledalf 0>>
+<<GetMoney GameManager 5>>
+
 ===
