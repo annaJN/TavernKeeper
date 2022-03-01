@@ -33,12 +33,12 @@ position: -507,-170
 The Orc looks tense, and is constantly glancing at the door. 
 You put the ale down on the table. 
 Orc: Ah, finally.
- -> "Uhm... That would be 5 slugs."
+ -> "Uhm... That would be 5 coin."
 Orc: Oh, yes, right. Of course.
 Orc: Wait...
 Orc: ...
 The orc rummages through a bag by his feet, getting increasingly frustrated. 
-Finally he finds a pouch and pours out its contents on the table; 5 slugs exactly.
+Finally he finds a pouch and pours out its contents on the table; 5 coin exactly.
 <<GetMoney GameManager 5>>
 Orc: ...there.
 -> "Have a nice evening." 

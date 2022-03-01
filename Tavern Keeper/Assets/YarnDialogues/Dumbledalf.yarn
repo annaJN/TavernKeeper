@@ -75,7 +75,19 @@ Dumbledalf: We meet again, fellow human!
 -> "I'm not really huma-"
 -> ...
 Dumbledalf: You know its dangerous to be alone out there, better to have a job here than be an adventurer! //Legend of Zelda
-Dumbledalf: Also! I am in need of some more soup. My master requires it. 
+Dumbledalf: Now I must go...
+-> But you just arri-
+Dumbledalf: ...to a table! Please come serve me over there!
+    <<LeaveChar GameManager Dumbledalf>>
+    <<EnterChar GameManager "Dumbledalf" CharHolderBar>>
+    <<SetStartNode GameManager Dumbledalf "Dumbledalf2.2">>
+
+===
+title: Dumbledalf2.2
+---
+Dumbledalf: Hello there! I am Dumbledalf, the wizard!
+(I knew that already...)
+Dumbledalf: I am in need of some more soup! My master requires it. 
 <<set $DumbledalfServed to 0>>
 <<SetOrder Dumbledalf 2>>
 <<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting2">>
@@ -154,7 +166,7 @@ Dumbledalf: You have lost something this evening.
 -> How did you know?
 -> Yes, I got robbed ...I think.
 Dumbledalf: Since I am the great wizard Dumbledalf, I shall grant you your losses back!
-7 gold coins appear on the bar.
+7 coins appear on the table.
 (I'm pretty sure I had more than this)
 (But who am I to complain)
 <<GetMoney GameManager 7>>
