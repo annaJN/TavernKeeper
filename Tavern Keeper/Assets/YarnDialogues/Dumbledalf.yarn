@@ -1,7 +1,7 @@
 ﻿title: Dumbledalf
 tags:
 ---
-Dumbledalf: Hello there! I'm Dumbledalf, the wizard!
+Dumbledalf: Hello there! I am Dumbledalf, the wizard!
 Dumbledalf: Surely you've heard of me!
 ->"Of course! Dumbledalf the wizard."
     Dumbledalf: Ohoho, but I don't do autonographs right now. 
@@ -51,13 +51,24 @@ The wizard vanishes into thin air, with soup, bowl and everything.
 ->"Wait-!"
 ...
 (Well that sets me back one bowl...)
-
-//waiting dialogue here!!
-
+<<if $talkedToGurak == 1>>
+    <<EnterChar GameManager "Dumbledalf" CharHolderBar>>
+    <<SetStartNode GameManager Dumbledalf "Dumbledalf2">>
+    Oh... That was quick.
+<<else>>
+    (Should I go check on the other customer?)
+    (He could probably use another ale, but he didn't seem to have any more money...)
+    (I could just wait for the next customer to show up...)
+    -> Go check on the orc.
+    -> Wait for another customer. 
+        <<EnterChar GameManager "Dumbledalf" CharHolderBar>>
+        <<SetStartNode GameManager Dumbledalf "Dumbledalf2">>
+        Oh... Him again.
+<<endif>>
 ===
 title: Dumbledalf2
 ---
-
+<<LeaveChar GameManager Gurak>>
 Dumbledalf: Hello Hello!
 Dumbledalf: We meet again, fellow human!
 -> "That's an odd thing to sa-"
@@ -117,10 +128,12 @@ Dumbledalf: Yes! It's dangerous to be physically present instead of being-
 <<LeaveChar GameManager Dumbledalf>>
 The wizard vanishes. Again with the bowl. 
 
+<<EnterChar GameManager "Ruskala" CharHolder2_2>>
+
 ===
 title: Dumbledalf3
 ---
-Dumbledalf: Hello there! I'm Dumbledalf, the wizard!
+Dumbledalf: Hello there! I am Dumbledalf, the wizard!
 -> Yes, I know. 
     Dumbledalf: Aha! You've heard of me!
 -> ...
@@ -188,8 +201,10 @@ Dumbledalf: The seagulls, mrrh! Poke your knees!
 ===
 title: Dumbledalf_Soup3
 ---
-
 <<SetOrder Dumbledalf 0>>
+Dumbledalf: Thank you!
 <<GetMoney GameManager 5>>
-
+<<LeaveChar GameManager Dumbledalf>>
+The wizard and soup vanishes, but the bowl remains on the counter.
+(Hm. That could get messy...)
 ===

@@ -43,6 +43,7 @@ Finally he finds a pouch and pours out its contents on the table: 5 slugs exactl
 Orc: ...there.
 -> "Have a nice evening." 
 <<SetStartNode GameManager Gurak "Gurak_waiting2">>
+<<EnterChar GameManager "Dumbledalf" CharHolderBar>>
 
 ===
 title: Gurak_waiting2
