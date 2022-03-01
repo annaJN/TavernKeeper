@@ -49,7 +49,7 @@ Orc: Tell me where he went. Quick.
     <<GetMoney GameManager 4>> 
     She gives you four coin. She stands up and hesitates, looking at you. 
     Then she shakes her head and leves. 
-    <<set $TalkedToRusalka = 1>>
+    <<set $TalkedToRuskala = 1>>
     <<LeaveChar GameManager Ruskala>>
 (...)
 (Wonder what will happen to those two.) 

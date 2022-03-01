@@ -1,25 +1,103 @@
 ﻿title: Ending
 ---
-<<if $TalkedToRusalka == 1>>
-    <<jump Gurak_Ending>>
+<<if $TalkedToRuskala == 1>>
+    <<EnterChar GameManager "Gurak" CharHolder1_1>>
+    <<SetStartNode GameManager Gurak Gurak_Ending>>
+    <<EnterChar GameManager "Ruskala" CharHolder1_2>>
+    <<SetStartNode GameManager Ruskala Gurak_Ending>>
 <<else>>
-    <<jump Rusalka_Ending>>
+    <<EnterChar GameManager "Ruskala" CharHolder1_1>>
+    <<SetStartNode GameManager Ruskala Ruskala_Ending>>
 <<endif>>
 
 ===
 title: Gurak_Ending
 ---
-<<EnterChar GameManager "Gurak" CharHolder1_1>>
-<<SetStartNode GameManager Gurak Gurak_Ending>>
-<<EnterChar GameManager "Rusalka" CharHolder1_2>>
-<<SetStartNode GameManager Rusalka Gurak_Ending>>
-$bluuRan
+-> "Hello again."
+Gurak: Hello, barkeep. Me and friend want ale. 
+Gurak: Ah, and this is Ruskala. She is friend. 
+Ruskala: Hey. 
+-> "It's good to see you two again." 
+Ruskala: Yes...
+Ruskala: Thank you for earlier, for what you said. 
+Ruskala: It made me... reconsider. 
+Gurak: Ruskala now fugitive too.
+Ruskala: Yes, now we're on the run together.
+Gurak: Things not so bad, when you have friend.
+<<SetOrder Gurak 1>>
+<<set $GurakServed to 0>>
+<<SetOrder Ruskala 1>>
+<<set $RuskalaServed to 0>>
+
+<<SetStartNode GameManager Ruskala Gurak_EndingWaiting>>
+<<SetStartNode GameManager Gurak Gurak_EndingWaiting>>
 
 ===
-title: Rusalka_Ending
+title: Gurak_EndingWaiting
 ---
-<<EnterChar GameManager "Rusalka" CharHolder1_1>>
-<<SetStartNode GameManager Rusalka Rusalka_Ending>>
-$bluuRan
+<<if $GurakServed == 1 and $RuskalaServed == 1>>
+    <<jump Gurak_EndingAle>>
+<<endif>>
+Gurak: We both want ale. 
+Ruskala: ...
+Gurak: Please.
 
+===
+title: Gurak_EndingAle
+---
+<<SetOrder Gurak 0>>
+<<SetOrder Ruskala 0>>
+Ruskala: Thanks. 
+<<if $bluuRan == 1>>
+    Ruskala: Oh, we found this pouch with money on the way in.
+    Ruskala: You can have it as payment. And as a thanks for helping us.
+    <<GetMoney GameManager 20>>
+    You got your money pouch back! It's a little mud-stained.
+<<else>>
+    <<GetMoney GameManager 10>>
+<<endif>>
+Ruskala: Now we should get going...
+Gurak: Goodbye. Thank you.
+Ruskala: Yeah, thanks. 
+
+<<LeaveChar GameManager Gurak>>
+<<LeaveChar GameManager Ruskala>>
+
+(Congrats! You finished the game!)
+(Thank you for playing!)
+
+===
+title: Ruskala_Ending
+---
+<<if $RuskalaServed == 1>>
+    <<jump Ruskala_EndingAle>>
+<<endif>>
+
+The orc looks somber, and she has blood stains on her clothes. 
+Orc: Get me an ale. 
+-> "Coming right up"
+<<SetOrder Ruskala 1>>
+<<set $RuskalaServed to 0>>
+
+===
+title: Ruskala_EndingAle
+---
+<<SetOrder Ruskala 0>>
+Ruskala: Thanks. 
+<<if $bluuRan>>
+    Orc: I found this on the way in.
+    The orc gives you a money pouch. Your money pouch.
+    There is some money missing, but at least you got some of it back. 
+    <<GetMoney GameManager 10>>
+    Orc: You can have it, as payment, and as a thanks for earlier. 
+<<else>>
+    The orc puts five coins on the table. 
+    <<GetMoney GameManager 5>>
+<<endif>>
+<<LeaveChar GameManager Ruskala>>
+
+(Congrats! You finished the game!)
+(There's actually another ending...)
+(To get it, you could try talking to the orcs a bit more...)
+(Thank you for playing!)
 ===
