@@ -60,6 +60,7 @@ The wizard vanishes into thin air, with soup, bowl and everything.
     (He could probably use another ale, but he didn't seem to have any more money...)
     (I could just wait for the next customer to show up...)
     -> Go check on the orc.
+        <<set $checked = 1>>
     -> Wait for another customer. 
         <<EnterChar GameManager "Dumbledalf" CharHolderBar>>
         <<SetStartNode GameManager Dumbledalf "Dumbledalf2">>

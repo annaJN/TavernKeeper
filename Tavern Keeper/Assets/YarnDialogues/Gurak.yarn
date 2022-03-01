@@ -134,6 +134,11 @@ Gurak: I need quiet.
 -> "I'll leave you to your ale then."
 <<set $talkedToGurak = 1>>
 <<SetStartNode GameManager Gurak "Gurak_end">>
+
+<<if $checked == 1>>
+    <<EnterChar GameManager "Dumbledalf" CharHolderBar>>
+<<endif>>
+
 ===
 title: Gurak_end
 position: 374,-143
