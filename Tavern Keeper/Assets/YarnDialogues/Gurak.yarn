@@ -137,6 +137,7 @@ Gurak: I need quiet.
 
 <<if $checked == 1>>
     <<EnterChar GameManager "Dumbledalf" CharHolderBar>>
+    <<SetStartNode GameManager Gurak "Dumbledalf2">>
 <<endif>>
 
 ===
