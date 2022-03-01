@@ -184,14 +184,14 @@ Dumbledalf: And because I require sustinance...
     Dumbledalf: I want some soup!
     -> Coming right up!
 -> Coming right up!
-<<set $DumbledalfServedSoup to 0>>
+<<set $DumbledalfServed to 0>>
 <<SetOrder Dumbledalf 2>>
 <<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting3">>
 
 ===
 title: Dumbledalf_waiting3
 ---
-<<if $DumbledalfServedSoup == 1>>
+<<if $DumbledalfServed == 1>>
     <<jump Dumbledalf_Soup3>>
 <<endif>>
 He seems to be humming something...
@@ -203,7 +203,7 @@ Dumbledalf: I said seagulls... mrrh! Stop it now!
 ===
 title: Dumbledalf_waiting3_1
 ---
-<<if $DumbledalfServedSoup == 1>>
+<<if $DumbledalfServed == 1>>
     <<jump Dumbledalf_Soup3>>
 <<endif>>
 He seems to be humming something...
