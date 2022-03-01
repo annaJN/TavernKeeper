@@ -1,16 +1,43 @@
-﻿title: DumbledalfMeeting1
+﻿title: Dumbledalf
 tags:
 ---
-Dumbledalf: Hello there! 
+Dumbledalf: Hello there! I'm Dumbledalf, the wizard!
+Dumbledalf: Surely you've heard of me!
+->"Of course! Dumbledalf the wizard."
+    Dumbledalf: Ohoho, but I don't do autonographs right now. 
+        ->(I think you mean autographs...)
+->"It does sound familiar..."
+    Dumbledalf: Of course it does! 
+->"Can't say I have."
+    Dumbledalf: Ahaha. What a clever and indigenous joke!
+    ->(I think you mean ingenious...)
 Dumbledalf: Now tell me. Do you mayhaps serve ale at this...
 Dumbledalf: ...establishment! 
 The wizard speaks with a shrill voice, used to teeling people what to do. 
--> Of course, It'll be right up. 
+->"Of course, It'll be right up."
 
 ===
+title: Dumbledalf_ale
+---
+Dumbledalf: I will take my leave now.
+-> "Good evening then."
+Dumbledalf: What do you mean? 
+-> "What?"
+Dumbledalf: Do you wish me a good evening, or mean that it is a good evening whether I want it or not;
+Dumbledalf: or that you feel good this evening; 
+Dumbledalf: or that it is an evening to be good on?
+-> "Uhhh..."
+    Dumbledalf: Well no matter.
+-> "All of them, at once!"
+    Dumbledalf: Aha! How interesting.
+    Dumbledalf: Then 'good evening' to you too. 
+Dumbledalf: I will take my leave.
+Dumbledalf: Be careful out there!
+<<LeaveChar GameManager Dumbledalf>>
+(But I'm not going out there...)
 
-title: DumbledalfMeeting2
-tags:
+===
+title: Dumbledalf2
 ---
 <<if $DumbledalfServedSoup == 1>>
     <<jump DumbledalGotSoup>>
@@ -24,11 +51,11 @@ Dumbledalf: Also! I am in need of some soup. My master requires it.
 
 ===
 
-title: DumbledalGotSoup
-tags:
+title: Dumbledalf_Soup1
 ---
 Dumbledalf: Ohoho hothothot...
 Dumbledalf: Thank you, I must be going now. 
-<<LeaveChar GameManager Name>>
-The wizard just vanishes into thin air. Back to wherever he came from to give his master some soup probably. 
+<<LeaveChar GameManager Dumbledalf>>
+The wizard just vanishes into thin air, with soup, bowl and everything. Back to wherever he came from to give his master some soup probably.
+  
 ===
