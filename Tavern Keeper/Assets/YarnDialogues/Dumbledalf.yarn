@@ -102,7 +102,7 @@ title: Dumbledalf_waiting2
 -> "Can I have my bowl back?"
 Dumbledalf: Aha! Why yes! Yes you can!
 He gives you the bowl. To your surprise, it's cleanier than it has ever been.  
-<<Set $bowl = 1>>
+<<set $bowl = 1>>
 <<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting2_2">>
 
 ===
@@ -154,12 +154,12 @@ Dumbledalf: Hello there! I am Dumbledalf, the wizard!
 Dumbledalf: Because I was here earlier! 
 Dumbledalf: And now I return! For I am on a quest! 
 Dumbledalf: A quest to return what is rightfully yours!
-<<if $bowl==1>>
+<<if $bowl == 1>>
     Dumbledalf: Here is your bowl back!
     He gives you the bowl. It's sparkling clean.
 <<else>>
     Dumbledalf: Here are your bowls back!
-    He gives you the bowls. Thew are sparkling clean.
+    He gives you the bowls. They are sparkling clean.
 <<endif>>
 Dumbledalf: All debts must be repayed! 
 Dumbledalf: And for your service this evening, I thank you.
@@ -220,5 +220,5 @@ Dumbledalf: Thank you!
 <<LeaveChar GameManager Dumbledalf>>
 The wizard and soup vanishes, but the bowl remains on the table.
 (Hm. That could get messy...)
-<<EnterChar GameManager "BlueMoney" CharHolderBar>>
+<<EnterChar GameManager "BluuMoney" CharHolderBar>>
 ===
