@@ -78,12 +78,11 @@ Dumbledalf: You know its dangerous to be alone out there, better to have a job h
 Dumbledalf: Now I must go...
 -> But you just arri-
 Dumbledalf: ...to a table! Please come serve me over there!
-    <<LeaveChar GameManager Dumbledalf>>
-    <<EnterChar GameManager "Dumbledalf" CharHolderBar>>
-    <<SetStartNode GameManager Dumbledalf "Dumbledalf2.2">>
-
+<<LeaveChar GameManager Dumbledalf>>
+<<EnterChar GameManager "Dumbledalf" CharHolder2_2>>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf2Table">>
 ===
-title: Dumbledalf2.2
+title: Dumbledalf2Table
 ---
 Dumbledalf: Hello there! I am Dumbledalf, the wizard!
 (I knew that already...)
@@ -101,11 +100,11 @@ title: Dumbledalf_waiting2
 -> "Can I have my bowl back?"
 Dumbledalf: Aha! Why yes! Yes you can!
 He gives you the bowl. To your surprise, it's cleanier than it has ever been.  
-<<Set $bowl == 1>>
-<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting2.2">>
+<<Set $bowl = 1>>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting2_2">>
 
 ===
-title: Dumbledalf_waiting2.2
+title: Dumbledalf_waiting2_2
 ---
 <<if $DumbledalfServed == 1>>
     <<jump Dumbledalf_Soup2>>
@@ -197,10 +196,10 @@ He seems to be humming something...
 Dumbledalf: Rockin', rockin' and rolling... Down to the beach I'm strolling...
 Dumbledalf: But the seagulls, poke at my head, not fun!
 Dumbledalf: I said seagulls... mrrh! Stop it now!
-<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting3.1">>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf_waiting3_1">>
 
 ===
-title: Dumbledalf_waiting3.1
+title: Dumbledalf_waiting3_1
 ---
 <<if $DumbledalfServedSoup == 1>>
     <<jump Dumbledalf_Soup3>>
@@ -217,6 +216,6 @@ title: Dumbledalf_Soup3
 Dumbledalf: Thank you!
 <<GetMoney GameManager 5>>
 <<LeaveChar GameManager Dumbledalf>>
-The wizard and soup vanishes, but the bowl remains on the counter.
+The wizard and soup vanishes, but the bowl remains on the table.
 (Hm. That could get messy...)
 ===

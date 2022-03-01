@@ -3,13 +3,13 @@ tags:
 ---
 Orc: You there!
 Orc: Have you seen a big orc man around here? 
-Orc: Large, bald, wearing armour with a crest. A mix of a 
+Orc: Large, bald, wearing armour with a crest. A mix of a... 
 Orc: ...green. You know. 
 (The description matches the Orc that was here before, all except the armour.)
 (Perhaps that's why he was bare chested. To hide.) 
 -> "Yes."
     <<jump RuskalaYesOption>>
--> "No."
+-> "I have not seen anyone who matches that description."
     <<jump RuskalaNoOption>>
 
 <<if $talkedToGurak == 1 >>
@@ -24,37 +24,36 @@ tags:
 ---    
 Orc: Yes!
 Orc: Tell me where he went. Quick. 
--> Tell her what you know. 
-"He went out the door, no windows here so don't know which direction."
-Orc: Thank you the information. Here.
-<<GetMoney GameManager 2>> 
-She gives you two coin as she leaves for the door. 
-<<LeaveChar GameManager Ruskala>>
+->"He went out the door, no windows here so don't know which direction."
+    Orc: Thank you the information. Here.
+    <<GetMoney GameManager 2>> 
+    She gives you two coin as she leaves for the door. 
+    <<LeaveChar GameManager Ruskala>>
 
--> Lie. 
-"He said he was going to find the nearest harbour and find a ship." 
-Orc: Thank you the information. Here.
-<<GetMoney GameManager 2>> 
-She gives you two coin as she leaves for the door. 
-<<LeaveChar GameManager Ruskala>>
+-> (Lie.) "He said he was going to find the nearest harbour and find a ship." 
+    Orc: Thank you the information. Here.
+    <<GetMoney GameManager 2>> 
+    She gives you two coin as she leaves for the door. 
+    <<LeaveChar GameManager Ruskala>>
 
--> Tell her you think he is not dangerous. 
-"He told me what happened. I don't think he is dangerous."
-"He seems like a nice person, whatever justice is waiting for him. I don't think he deserves it."
-The orc stares at you, listening intently. 
-"Maybe..."
-"Just hear him out."
-Orc: ...
-Orc: Maybe I will... 
-Orc: ...maybe I will not.  
-Orc: For the information.
-<<GetMoney GameManager 4>> 
-She gives you four coin. She stands up and hesitates, looking at you. 
-Then shakes her head and leves. 
-<<LeaveChar GameManager Ruskala>>
+-> "He told me what happened. I don't think he is dangerous."
+    Orc: ...
+    -> "He seems like a nice person, whatever justice is waiting for him. I don't think he deserves it."
+    The orc stares at you, listening intently. 
+    -> "Maybe..."
+        -> "Just hear him out?"
+    Orc: ...
+    Orc: Maybe I will... 
+    Orc: ...maybe I will not.  
+    Orc: For the information.
+    <<GetMoney GameManager 4>> 
+    She gives you four coin. She stands up and hesitates, looking at you. 
+    Then she shakes her head and leves. 
+    <<LeaveChar GameManager Ruskala>>
 (...)
 (Wonder what will happen to those two.) 
-//End - enter another character
+<<EnterChar GameManager "Dumbledalf" CharHolder3_2>>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf3">>
 ===
 
 title: RuskalaYesOption
@@ -62,14 +61,13 @@ tags:
 ---    
  Orc: Tell me more. Did you talk to him? Do you know where he whent? 
  Orc: He is very dangerous. I am here to bring him back to our, no MY clan, to justice. 
- "He was here for an ale, seemd worried." 
--> Tell her where he left. 
-    "He finished up and left. Don't know exactly where to."
+-> "He finished up and left. Don't know where to."
     Orc: Thank you the information. Here.
     <<GetMoney GameManager 2>> 
     She gives you two coin as she leaves for the door. 
     <<LeaveChar GameManager Ruskala>>
-    //End - enter another character
+    <<EnterChar GameManager "Dumbledalf" CharHolder3_2>>
+    <<SetStartNode GameManager Dumbledalf "Dumbledalf3">>
 <<if $talkedToGurak == 1 >>
     -> "Is his name Gurak?"
     <<jump TalkedToGurakOption>>
@@ -79,12 +77,12 @@ tags:
 title: RuskalaNoOption
 tags:
 --- 
-"I have not seen anyone who matches that description."
-(Exactly that description.)
+(Not exactly that that description, anyway...)
 Orc: Well. If you see him be careful. He is very dangerous. 
 Orc: For your time. 
 <<GetMoney GameManager 2>>    
  She gives you two coin as she leaves for the door. 
  <<LeaveChar GameManager Ruskala>>
- //End - enter another character
+<<EnterChar GameManager "Dumbledalf" CharHolder3_2>>
+<<SetStartNode GameManager Dumbledalf "Dumbledalf3">>
 ===
