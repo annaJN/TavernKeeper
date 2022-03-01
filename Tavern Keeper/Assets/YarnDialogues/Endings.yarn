@@ -2,8 +2,8 @@
 ---
 <<if $TalkedToRuskala == 1>>
     <<EnterChar GameManager "Gurak" CharHolder1_1>>
-    <<SetStartNode GameManager Gurak Gurak_Ending>>
     <<EnterChar GameManager "Ruskala" CharHolder1_2>>
+    <<SetStartNode GameManager Gurak Gurak_Ending>>
     <<SetStartNode GameManager Ruskala Gurak_Ending>>
 <<else>>
     <<EnterChar GameManager "Ruskala" CharHolder1_1>>

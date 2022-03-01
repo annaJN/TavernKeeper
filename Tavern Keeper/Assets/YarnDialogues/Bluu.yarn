@@ -54,7 +54,7 @@ The creature points at the soup.
 title: BluuSoup
 ---
 The creature smiles and begins to eat with vigor. 
-He pour out the gold on the counter but keeps the pouch. 
+He pours out the gold on the counter but keeps the pouch. 
 <<GetMoney GameManager 20>>
 (At least I got the gold back.)
 <<SetStartNode GameManager Dumbledalf "BluuHappy">>
