@@ -20,23 +20,19 @@ You have been robbed, a nice start to the evening.
 title: BluuMoney
 position: 5,-49
 ---
-<<if $BluuServed == 1>>
-    <<jump BluuSoup>>
-<<endif>>
-
 A blue creature stands before you, it seems familiar. 
 Creature: Hin hin. Woib? 
 The creature clicks a pouch of money and points at the soup. 
 Your pouch of money. 
 Creature: Woib...?
-<<set $BluuServed to 0>>
+<<set $BluuMoneyServed to 0>>
 <<SetOrder BluuMoney 2>>
 <<SetStartNode GameManager BluuMoney "BluuWaiting">>
 
 ===
 title: BluuWaiting
 ---
-<<if $BluuServed == 1>>
+<<if $BluuMoneyServed == 1>>
     <<jump BluuSoup>>
 <<endif>>
 Creature: Woib!
