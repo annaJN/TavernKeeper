@@ -31,6 +31,7 @@ Your pouch of money.
 Creature: Woib...?
 <<set $BluuServed to 0>>
 <<SetOrder BluuMoney 2>>
+<<SetStartNode GameManager BluuMoney "BluuWaiting">>
 
 ===
 title: BluuWaiting
@@ -57,7 +58,7 @@ The creature smiles and begins to eat with vigor.
 He pours out the gold on the counter but keeps the pouch. 
 <<GetMoney GameManager 20>>
 (At least I got the gold back.)
-<<SetStartNode GameManager Dumbledalf "BluuHappy">>
+<<SetStartNode GameManager BluuMoney "BluuHappy">>
 <<jump Ending>>
 ===
 title: BluuHappy
